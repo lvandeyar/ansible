@@ -1,0 +1,5 @@
+- name: Make Testr Dir
+  hosts: all
+  tasks:
+    - name: Run Script to make dir
+      script: files/script.ps1

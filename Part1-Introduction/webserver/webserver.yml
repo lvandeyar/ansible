@@ -1,0 +1,10 @@
+---
+- name: Install Webserver
+  hosts: all
+  sudo: yes
+  tasks:  
+     - name: Install Apache
+       apt: name=apache2 state=present
+
+     - name: Deploy Custom Homepage
+       template: src=files/index.html dest=/var/www/html
